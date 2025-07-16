@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(images/bg.jpg);
+  height: 100vh;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+h1 {
+  font-family: "Stardos Stencil", sans-serif;
+  text-align: center;
+  color: #ffff00;
+  background-color: #000096;
+  margin: 0;
+  letter-spacing: 0.2rem;
+  padding: 40px;
+  display: block;
+  font-size: 2.8rem;
+}
+#football {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  animation: floatBubble 6s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-48%) translateY(-20px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+}
+
+#description {
+  color: #faf7f3;
+  text-align: center;
+  background-color: #ffff00;
+}
+.rules {
+  display: inline-block;
+  color: #3132fe;
+  font-size: 20px;
+  padding: 10px;
+}
+.rules p {
+  font-weight: bold;
+}
+.rules ul {
+  text-align: left;
+}
+#description > img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+.form img {
+  display: block;
+  max-width: 250px;
+  margin: 20px auto;
+  filter: brightness(0) invert(1);
+}
+
+.form {
+  position: relative;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 70px auto;
+}
+.form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/image2.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+fieldset {
+  border: none;
+  color: white;
+}
+#userdetails {
+  margin: 0 20px;
+}
+#idealtime {
+  margin: 20px;
+}
+#payment {
+  margin: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+}
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+#idealtime label {
+  display: inline-block;
+}
+#payment label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  margin-left: auto;
+}
+
+#payment button {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Poppins;
+  margin-top: -5px;
+}
+#payment input[type="file"]::file-selector-button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: white;
+  font-size: 14px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #3132fe;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+  width: 80%;
+}
+
+button:hover {
+  background-color: #ffff00;
+  color: #3132fe;
+}
+#terms {
+  color: white;
+  margin: 20px;
+}
+#terms a:hover {
+  text-decoration: underline;
+}
+#submit-button {
+  font-size: 20px;
+  display: block;
+  margin: 30px auto 30px auto;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+a {
+  color: #ffff00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Contact Section */
+.fa-phone {
+  margin-right: 8px;
+}
+#contact {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #ff0082;
+  color: #faf7f3;
+}
+
+#contact ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#contact li {
+  display: inline-block;
+  margin-bottom: 2px;
+}
+#thank-you-message {
+  display: none;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  color: #ffff00;
+}
+
+#loading-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading-text {
+  color: white;
+  font-size: 1.5rem;
+  background-color: #222;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="file"] {
+    font-size: 14px;
+  }
+  #payment {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #payment label {
+    width: 100%;
+  }
+  #payment button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  #contact li {
+    display: block;
+    margin-bottom: 2px;
+  }
+  button {
+    width: 80%;
+  }
+}
