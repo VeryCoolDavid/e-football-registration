@@ -1,5 +1,4 @@
 const heading = document.getElementById("greeting");
-
 // Array of full sentences
 const sentences = [
   "Lamsogo Thwng-kwrwngrokno",
@@ -12,7 +11,7 @@ let index = 0;
 setInterval(() => {
   index = (index + 1) % sentences.length;
   heading.textContent = sentences[index];
-}, 3000); //after every 3 seconds
+}, 2000); //after every 2 seconds
 
 function handleUPIPayment() {
   window.location.href =
