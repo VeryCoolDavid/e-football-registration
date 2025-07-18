@@ -15,6 +15,17 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
+#football {
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  width: 8vw;
+  max-width: 60px;
+  min-width: 30px;
+  aspect-ratio: 1 / 1;
+  z-index: 9999;
+  pointer-events: none;
+}
 
 h1 {
   font-family: "Stardos Stencil", sans-serif;
@@ -22,21 +33,8 @@ h1 {
   color: #ffff00;
   background-color: #000096;
   margin: 0;
-
-  padding: 40px;
-  display: block;
+  padding: 20px;
   font-size: 2.8rem;
-}
-#football {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  z-index: 1;
-  animation: floatBubble 6s ease-in-out infinite;
-  opacity: 0.9;
 }
 
 @keyframes floatBubble {
@@ -296,11 +294,6 @@ ul {
   h1 {
     font-size: 1rem;
     line-height: 1rem;
-    padding: 30px;
-  }
-  #football {
-    height: 20px;
-    width: 20px;
   }
 
   #payment label {

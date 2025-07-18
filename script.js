@@ -13,6 +13,44 @@ setInterval(() => {
   heading.textContent = sentences[index];
 }, 2000); //after every 2 seconds
 
+const ball = document.getElementById("football");
+let x = window.innerWidth * 0.05;
+let y = window.innerHeight * 0.05;
+let dx = 2;
+let dy = 2;
+
+function moveBall() {
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const bw = ball.offsetWidth;
+  const bh = ball.offsetHeight;
+
+  x += dx;
+  y += dy;
+
+  // Bounce off edges
+  if (x <= 0 || x + bw >= vw) dx *= -1;
+  if (y <= 0 || y + bh >= vh) dy *= -1;
+
+  ball.style.left = x + "px";
+  ball.style.top = y + "px";
+
+  requestAnimationFrame(moveBall);
+}
+
+window.addEventListener("resize", () => {
+  // Prevent ball from going off-screen after resizing
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const bw = ball.offsetWidth;
+  const bh = ball.offsetHeight;
+
+  x = Math.min(x, vw - bw);
+  y = Math.min(y, vh - bh);
+});
+
+moveBall();
+
 function handleUPIPayment() {
   window.location.href =
     "upi://pay?pa=victotdebbarma-1@oksbi&pn=Victor%20DEBBARMA&am=100&cu=INR&tn=Entry%20Fee";
@@ -20,7 +58,7 @@ function handleUPIPayment() {
   // Show the upload section after a delay (optional)
   setTimeout(() => {
     document.getElementById("upload-section").style.display = "block";
-  }, 3000); //sfter every 3 seconds
+  }, 1000); //sfter every 1 seconds
 }
 
 const scriptURL =
