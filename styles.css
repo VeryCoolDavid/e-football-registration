@@ -15,17 +15,6 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
-#football {
-  position: fixed;
-  top: 5vh;
-  left: 5vw;
-  width: 8vw;
-  max-width: 60px;
-  min-width: 30px;
-  aspect-ratio: 1 / 1;
-  z-index: 9999;
-  pointer-events: none;
-}
 
 h1 {
   font-family: "Stardos Stencil", sans-serif;
@@ -35,6 +24,7 @@ h1 {
   margin: 0;
   padding: 20px;
   font-size: 2.8rem;
+  letter-spacing: 0.4rem;
 }
 
 @keyframes floatBubble {
